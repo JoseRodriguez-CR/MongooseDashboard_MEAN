@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+    </head>
+    <body>
+        <h1>Index Page!</h1>
+        <a href="/dogs/new">Create new dog</a>
+        <% for (i=0; i < dogs.length; i++) { %>
+            <div>
+                <p>Name: <a href="/dogs/<%= dogs[i]._id %>"><%= dogs[i].name %></a></p>
+                <br/>
+                <a href="/dogs/edit/<%= dogs[i]._id %>"><button>Edit dog</button></a>
+                <form action="/dogs/destroy/<%= dogs[i]._id %>" method='post'>
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+        <% } %>
+        
+    </body>
+</html>
