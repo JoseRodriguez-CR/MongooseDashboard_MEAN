@@ -30,8 +30,8 @@ const DogModel = {
     getDogById : function( userName ){
         return Dog.findOne({ userName });
     },
-    deleteDogById : function( dogId ){
-        return Dog.deleteOne( {dogId} );
+    deleteDogById : function( _id ){
+        return Dog.deleteOne( {_id} );
     },
     updateUser : function( dogName, dogToUpdate ){
         return Dog.findOneAndUpdate( {dogName}, {$set : dogToUpdate }, {new : true} )

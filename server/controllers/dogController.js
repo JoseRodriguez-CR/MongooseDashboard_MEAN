@@ -5,7 +5,7 @@ const DogController = {
     loadIndex : function(request, response){
         DogModel.getDog()
         .then(result =>{
-            //console.log(result[0].name); dogs ifo is getting correctly from DB
+            //console.log(result[0].name); dogs info is getting correctly from DB
             response.render('index', { dogs: result });
         })
     },
@@ -28,6 +28,7 @@ const DogController = {
     },
     deleteDog : function(request, response){
         let name = request.params._id
+        console.log(name);// added to check if the parameter bring a value with it or if it is empty
         
         DogModel
             .getDogById( name )

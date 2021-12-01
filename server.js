@@ -30,6 +30,6 @@ app.use(express.static(__dirname + "/client/static"));
 app.use( '/', DogRouter);
 
 
-app.listen(8080, function(){
-    console.log("The Dogs server is running in port 8080.");
+app.listen(8888, function(){
+    console.log("The Dogs server is running in port 8888.");
 });

@@ -12,7 +12,7 @@ DogRouter
     .get( '/dogs/new', DogController.loadNew );
     
 DogRouter
-    .post( '/dogs/destroy/:id', DogController.deleteDog );
+    .post( '/dogs/destroy/:_id', DogController.deleteDog );
 
 DogRouter
     .get( '/dogs/edit/:id', DogController.editDog );
